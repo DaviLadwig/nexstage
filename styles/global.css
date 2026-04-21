@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Syne", sans-serif;
+}
+
+:root {
+    --header-bg: rgba(4, 14, 26, 0.72);
+    --header-bg-scroll: rgba(4, 14, 26, 0.92);
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.78);
+    --accent: #3c8fc2;
+    --accent-hover: #56a3d1;
+    --border-soft: rgba(255, 255, 255, 0.08);
+    --radius: 10px;
+    --transition: 0.3s ease;
+    --container: 1240px;
+}
+
+
+body {
+    background: linear-gradient(135deg, #02060b 0%, #071626 45%, #0a2233 100%);
+    min-height: 200vh;
+    color: var(--text-primary);
+}
