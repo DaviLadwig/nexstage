@@ -34,4 +34,26 @@ window.addEventListener("scroll", () => {
 });
 
 
-//GSAP
+//FUNÇÃO DE ESCONDER HEADER AO SCROLLAR A PÁGINA
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll && currentScroll > 120) {
+        gsap.to(".site-header", {
+            y: -120,
+            duration: 0.35,
+            ease: "power2.out"
+        });
+    } else {
+        gsap.to(".site-header", {
+            y: 0,
+            duration: 0.35,
+            ease: "power2.out"
+        });
+    }
+
+    lastScroll = currentScroll;
+});
+
