@@ -68,4 +68,43 @@ document.addEventListener("DOMContentLoaded", () => {
       once: true
     }
   });
-});D
+});
+
+//PAGINA PROJETOS===============================================================================================
+document.addEventListener("DOMContentLoaded", () => {
+  if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".projects-page-label", {
+    y: 18,
+    opacity: 0,
+    duration: 0.8,
+    ease: "power3.out"
+  });
+
+  gsap.from(".projects-page-header h1", {
+    y: 28,
+    opacity: 0,
+    duration: 1,
+    delay: 0.08,
+    ease: "power3.out"
+  });
+
+  gsap.from(".projects-page-header p", {
+    y: 22,
+    opacity: 0,
+    duration: 0.95,
+    delay: 0.16,
+    ease: "power3.out"
+  });
+
+  gsap.from(".project-box", {
+    y: 38,
+    opacity: 0,
+    duration: 0.9,
+    stagger: 0.1,
+    ease: "power3.out",
+    delay: 0.25
+  });
+});
