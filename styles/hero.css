@@ -35,7 +35,7 @@
 }
 
 .hero-content h1 {
-    font-size: clamp(1.8rem, 3vw, 5.1rem);
+    font-size: clamp(2rem, 4vw, 5.1rem);
     line-height: 1.02;
     letter-spacing: -1.8px;
     color: #f8fbff;
