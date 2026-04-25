@@ -3,58 +3,69 @@ document.addEventListener("DOMContentLoaded", () => {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    const finalCtaSection = document.querySelector(".final-cta-section");
-    if (!finalCtaSection) return;
+    const section = document.getElementById("pillarsSection");
+    if (!section) return;
 
-    gsap.from(".final-cta-label", {
+    gsap.from(".pillars-belt-label", {
         y: 18,
         opacity: 0,
         duration: 0.8,
         ease: "power3.out",
         scrollTrigger: {
-            trigger: finalCtaSection,
+            trigger: section,
             start: "top 82%",
             once: true
         }
     });
 
-    gsap.from(".final-cta-content h2", {
-        y: 28,
+    gsap.from(".pillars-belt-header h2", {
+        y: 24,
         opacity: 0,
         duration: 1,
         delay: 0.08,
         ease: "power3.out",
         scrollTrigger: {
-            trigger: finalCtaSection,
+            trigger: section,
             start: "top 82%",
             once: true
         }
     });
 
-    gsap.from(".final-cta-content p", {
-        y: 22,
-        opacity: 0,
-        duration: 0.95,
-        delay: 0.16,
-        ease: "power3.out",
-        scrollTrigger: {
-            trigger: finalCtaSection,
-            start: "top 82%",
-            once: true
-        }
-    });
-
-    gsap.from(".final-cta-actions .final-cta-btn", {
+    gsap.from(".pillars-belt-header p", {
         y: 18,
         opacity: 0,
-        duration: 0.8,
-        stagger: 0.1,
-        delay: 0.22,
+        duration: 0.9,
+        delay: 0.14,
         ease: "power3.out",
         scrollTrigger: {
-            trigger: finalCtaSection,
+            trigger: section,
             start: "top 82%",
             once: true
         }
     });
-}); 
+
+    gsap.from(".belt-back", {
+        x: 60,
+        opacity: 0,
+        duration: 1.1,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: ".pillars-belt-stage",
+            start: "top 88%",
+            once: true
+        }
+    });
+
+    gsap.from(".belt-front", {
+        x: -60,
+        opacity: 0,
+        duration: 1.1,
+        delay: 0.08,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: ".pillars-belt-stage",
+            start: "top 88%",
+            once: true
+        }
+    });
+});
