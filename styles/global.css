@@ -26,3 +26,7 @@ body {
     min-height: 200vh;
     color: var(--text-primary);
 }
+
+html{
+    scroll-behavior: smooth;
+}
